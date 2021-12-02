@@ -126,6 +126,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Groups(["users:read", "users:write"])]
     private $adresse;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Profil::class, inversedBy="users")
+     */
+    #[Groups(["users:read", "users:write"])]
+    private $profil;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -168,7 +174,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        // $roles[] = 'ROLE_USER';
+        $roles[] = 'ROLE_' . $this->profil->getLibelle();
 
         return array_unique($roles);
     }
@@ -283,6 +290,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setAdresse(string $adresse): self
     {
         $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getProfil(): ?Profil
+    {
+        return $this->profil;
+    }
+
+    public function setProfil(?Profil $profil): self
+    {
+        $this->profil = $profil;
 
         return $this;
     }
