@@ -1,3 +1,4 @@
+import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,8 @@ import { JwtInterceptorInterceptor } from './interceptor/jwt-interceptor.interce
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule
+    AuthModule,
+    AdminModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorInterceptor, multi: true}],
   bootstrap: [AppComponent]
