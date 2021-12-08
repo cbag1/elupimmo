@@ -1,1 +1,393 @@
-<p>dashboard works!</p>
+<div class=" py-10">
+    <div class="grid grid-cols-4 gap-10 text-center">
+        <div
+            class="group shadow-xl bg-white rounded border-2 p-8  border-gray-300 leading-4 hover:text-blue-600 hover:border-blue-600">
+            <h3 class="font-bold text-gray-400 text-xl mb-1 group-hover:text-blue-500"> Total Biens</h3>
+            <span class="font-semibold text-5xl text-gray-600 group-hover:text-blue-600">60</span>
+        </div>
+        <div
+            class="group bg-white shadow-xl rounded border-2 p-8  border-gray-300 leading-4 hover:text-blue-600 hover:border-blue-600">
+            <h3 class="font-bold text-gray-400 text-xl mb-1 group-hover:text-blue-500"> Biens loués</h3>
+            <span class="font-semibold text-5xl text-gray-600 group-hover:text-blue-600">16</span>
+        </div>
+        <div
+            class="group bg-white shadow-xl rounded border-2 p-8  border-gray-300 leading-4 hover:text-blue-600 hover:border-blue-600">
+            <h3 class="font-bold text-gray-400 text-xl mb-1 group-hover:text-blue-500"> Locataires</h3>
+            <span class="font-semibold text-5xl text-gray-600 group-hover:text-blue-600">43</span>
+        </div>
+        <div
+            class="group bg-white shadow-xl rounded border-2 p-8  border-gray-300 leading-4 hover:text-blue-600 hover:border-blue-600">
+            <h3 class="font-bold text-gray-400 text-xl mb-1 group-hover:text-blue-500"> Agents</h3>
+            <span class="font-semibold text-5xl text-gray-600 group-hover:text-blue-600">64</span>
+        </div>
+
+    </div>
+
+    <div class="w-full mt-10 border">
+        <div class="rounded  break-words bg-white w-full shadow-lg">
+            <div class="rounded-t px-4 py-3 border-0">
+                <div class=" flex relative items-center justify-between pb-1">
+                    <div class="py-4">
+                        <h3 class="font-semibold text-base text text-gray-700 tracking-wider">Dernieres Reservations
+                        </h3>
+                    </div>
+                    <div>
+                        <button
+                            class="bg-blue-700 tracking-widest text-white px-3 py-1 rounded-full uppercase text-xs font-bold">
+                            Voir tout
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="block w-full overflow-x-auto">
+                <table class="table-fixed w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                Agent
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                Nom Client
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                Date
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                Statut
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                <div class="flex items-center">
+                                    <div class="avatar">
+                                        <img src="../../../../assets/images/avatar.jpeg" class="rounded-full w-10 mr-4"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+                                    </div>
+                                </div>
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Ibrahima GOUDIABY
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Mars 29, 2019
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <button class="bg-red-600 px-6 py-2 text-white rounded-full">
+                                    Annulé
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                <div class="flex items-center">
+                                    <div class="avatar">
+                                        <img src="../../../../assets/images/avatar.jpeg" class="rounded-full w-10 mr-4"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+                                    </div>
+                                </div>
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Ibrahima GOUDIABY
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Mars 29, 2019
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <button class="bg-red-600 px-6 py-2 text-white rounded-full">
+                                    Annulé
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                <div class="flex items-center">
+                                    <div class="avatar">
+                                        <img src="../../../../assets/images/avatar.jpeg" class="rounded-full w-10 mr-4"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+                                    </div>
+                                </div>
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Ibrahima GOUDIABY
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Mars 29, 2019
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <button class="bg-red-600 px-6 py-2 text-white rounded-full">
+                                    Annulé
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                <div class="flex items-center">
+                                    <div class="avatar">
+                                        <img src="../../../../assets/images/avatar.jpeg" class="rounded-full w-10 mr-4"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+                                    </div>
+                                </div>
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Ibrahima GOUDIABY
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Mars 29, 2019
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <button class="bg-red-600 px-6 py-2 text-white rounded-full">
+                                    Annulé
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                <div class="flex items-center">
+                                    <div class="avatar">
+                                        <img src="../../../../assets/images/avatar.jpeg" class="rounded-full w-10 mr-4"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+                                    </div>
+                                </div>
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Ibrahima GOUDIABY
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                Mars 29, 2019
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                <button class="bg-red-600 px-6 py-2 text-white rounded-full">
+                                    Annulé
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full mt-10">
+        <div class=" grid grid-cols-3 gap-4">
+            <div class=" col-span-2">
+                <div class="rounded  break-words bg-white w-full shadow-lg">
+                    <div class="rounded-t px-4 py-3 border-0">
+                        <div class=" flex relative items-center justify-between pb-1">
+                            <div class="py-4">
+                                <h3 class="font-semibold text-base text text-gray-700 tracking-wider">
+                                    Dernieres Contrats
+                                </h3>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-blue-700 tracking-widest text-white px-3 py-1 rounded-full uppercase text-xs font-bold">
+                                    Voir tout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block w-full overflow-x-auto">
+                        <table class="table-fixed w-full border-collapse">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                        Agent
+                                    </th>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                        Nom Client
+                                    </th>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                        Bien
+                                    </th>
+                                    <th
+                                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                                        Date
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+
+                                    </th>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Ibrahima GOUDIABY
+                                    </td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Villa de Babacar GOUDIABY
+                                    </td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Mars 29, 2019
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+
+                                    </th>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Ibrahima GOUDIABY
+                                    </td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Villa de Babacar GOUDIABY
+                                    </td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Mars 29, 2019
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                                        <h4 class="font-medium">Cheikh Babacar GOUDIABY</h4>
+
+                                    </th>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Ibrahima GOUDIABY
+                                    </td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Villa de Babacar GOUDIABY
+                                    </td>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                        Mars 29, 2019
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="">
+                <div class="rounded  break-words bg-white w-full shadow-lg">
+                    <div class="rounded-t px-4 py-3 border-0">
+                        <div class=" flex relative items-center justify-between pb-1">
+                            <div class="py-4">
+                                <h3 class="font-semibold text-base text text-gray-700 tracking-wider">
+                                    Dernieres Clients
+                                </h3>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-blue-700 tracking-widest text-white px-3 py-1 rounded-full uppercase text-xs font-bold">
+                                    Voir tout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block w-full overflow-x-auto">
+                        <table class="table-fixed w-full border-collapse">
+
+                            <tbody>
+                                <tr>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+
+                                        <div class="flex items-center">
+                                            <div class="avatar">
+                                                <img src="../../../../assets/images/avatar.jpeg"
+                                                    class="rounded-full w-10 mr-4" alt="">
+                                            </div>
+                                            <div>
+                                                <h4 class="font-medium text-base">Cheikh Babacar GOUDIABY</h4>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td
+                                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+
+                                        <div class="flex items-center">
+                                            <div class="avatar">
+                                                <img src="../../../../assets/images/avatar.jpeg"
+                                                    class="rounded-full w-10 mr-4" alt="">
+                                            </div>
+                                            <div>
+                                                <h4 class="font-medium text-base">Cheikh Babacar GOUDIABY</h4>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
