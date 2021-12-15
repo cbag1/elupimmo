@@ -1,0 +1,208 @@
+<app-header></app-header>
+<div class="mx-16">
+    <div class="flex justify-center items-center ">
+        <div class=" px-36 w-full  rounded-2xl items-center bg-cover "
+            style="background-image: url('../../assets/images/bg1.jpg');">
+            <div class="pt-48 w-full pb-10">
+                <p class="text-6xl font-bold  text-white text-center drop-shadow-md decoration-wavy content-center ">
+                    Nous vous aidons à trouver votre maison de rêve</p>
+            </div>
+            <div class="formulaire mb-40  bg-white px-8 rounded-md">
+                <div class="flex space-x-2 divide-x-4 py-4">
+                    <div class="space-x-5 flex flex-shrink justify-center items-center">
+                        <div class="check space-x-2">
+                            <input type="radio" name="acheter" id="">
+                            <label for="acheter">Acheter</label>
+                        </div>
+                        <div class="check pr-5 space-x-2 ">
+                            <input type="radio" name="acheter" id="">
+                            <label for="louer">Louer</label>
+                        </div>
+                    </div>
+                    <div class=" flex flex-grow pl-14">
+                        <input class="flex-grow border border-blue-100" type="text">
+                        <button class="flex-shrink px-6 text-white" style="background-color: #5d5de9;"> valider</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biens -->
+    <div class="biens">
+        <div class="recent">
+            <div class="pt-11">
+
+                <div class="desc flex justify-between">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 uppercase">Récémment
+                        ajoutées</h1>
+                    <a href="#" class="uppercase text-2xl flex font-medium text-purple-800">
+                        VOIR PLUS
+                        <span class="pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <div class=" w-24 p-0.5 mt-0 mb-12 bg-purple-400"></div>
+
+            </div>
+        </div>
+
+        <div class="maison pb-10">
+            <div class="pt-11">
+
+                <div class="desc flex justify-between">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 uppercase">Maisons</h1>
+                    <a href="#" class="uppercase text-2xl flex font-medium text-purple-800">
+                        VOIR PLUS
+                        <span class="pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <div class=" w-24 p-0.5 mt-0 mb-12 bg-purple-400"></div>
+
+            </div>
+            <carousel [cellsToShow]="4" [height]="400">
+                <div *ngFor="let maison of maisons" class="carousel-cell border">
+                    <div class="h-1/2 w-full bg-cover" style="background-image: url('../../assets/images/maison.jpg')">
+                    </div>
+                    <div class="description pt-5 px-4">
+                        <h3 class=""> {{ maison.libelle }} </h3>
+                        <p class="font-bold pt-2 text-xl text-blue-600"> {{ maison.prix }} XOF </p>
+                        <div>
+                            {{ maison.nbChambres}} chambres | {{ maison.surface }} m2</div>
+                    </div>
+                </div>
+
+            </carousel>
+        </div>
+
+        <!-- Appartements -->
+        <div class="appartemens pb-10">
+            <div class="pt-11">
+
+                <div class="desc flex justify-between">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 uppercase">Appartements
+                    </h1>
+                    <a href="#" class="uppercase text-2xl flex font-medium text-purple-800">
+                        VOIR PLUS
+                        <span class="pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class=" w-24 p-0.5 mt-0 mb-12 bg-purple-400"></div>
+
+
+            </div>
+            <carousel [cellsToShow]="4" [height]="400">
+                <div *ngFor="let appartement of  appartements " class="carousel-cell border">
+                    <div class="h-1/2 w-full bg-cover" style="background-image: url('../../assets/images/maison.jpg')">
+                    </div>
+                    <div class="description pt-5 px-4">
+                        <h3 class=""> {{ appartement.libelle }} </h3>
+                        <p class="font-bold pt-2 text-xl text-blue-600"> {{ appartement.prix }} XOF </p>
+                        <!-- <div> -->
+                        <!-- {{ maison.nbChambres}} chambres | {{ maison.surface }} m2</div> -->
+                    </div>
+                </div>
+
+            </carousel>
+        </div>
+
+        <!-- Chambres -->
+        <div class="chambres pb-10">
+            <div class="pt-11">
+
+                <div class="desc flex justify-between">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 uppercase ">Chambres</h1>
+                    <a href="#" class="uppercase text-2xl flex font-medium text-purple-800">
+                        VOIR PLUS
+                        <span class="pl-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class=" w-24 p-0.5 mt-0 mb-12 bg-purple-400"></div>
+
+            </div>
+            <carousel [cellsToShow]="4" [height]="400">
+                <div *ngFor="let chambre of  chambres " class="carousel-cell border">
+                    <div class="h-1/2 w-full bg-cover" style="background-image: url('../../assets/images/maison.jpg')">
+                    </div>
+                    <div class="description pt-5 px-4">
+                        <h3 class=""> {{ chambre.libelle }} </h3>
+                        <p class="font-bold pt-2 text-xl text-blue-600"> {{ chambre.prix }} XOF </p>
+                        <!-- <div> -->
+                        <!-- {{ maison.nbChambres}} chambres | {{ maison.surface }} m2</div> -->
+                    </div>
+                </div>
+
+            </carousel>
+        </div>
+    </div>
+
+    <!-- Contactez-nous -->
+    <div class="text-gray-600 body-font relative">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contactez-nous</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base"> Pour plus d'informations, envoyez-nous un
+                    message. Nous nous faisons un plaisir de vous repondre.</p>
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="name" class="leading-7 text-sm text-gray-600">Nom</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                            <textarea id="message" name="message"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <button
+                            class="flex mx-auto text-white bg-blue-600 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full font-bold tracking-wider ">Envoyer</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<app-footer></app-footer>

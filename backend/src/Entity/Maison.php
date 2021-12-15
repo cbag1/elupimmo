@@ -5,6 +5,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\MaisonRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=MaisonRepository::class)
@@ -16,11 +17,14 @@ class Maison extends Bien
     /**
      * @ORM\Column(type="integer")
      */
+
+    #[Groups(["biens:read", "biens:write"])]
     private $nbEtages;
 
     /**
      * @ORM\Column(type="integer")
      */
+    #[Groups(["biens:read", "biens:write"])]
     private $nbChambres;
 
 
