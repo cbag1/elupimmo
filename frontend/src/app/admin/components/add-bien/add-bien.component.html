@@ -1,0 +1,73 @@
+<div class="h-screen bg-white drop-shadow-2xl">
+    <div class="p-12">
+        <div class="forumaire text-gray-600">
+            <form action="">
+                <div class="basic ">
+                    <h2 class="font-bold text-gray-900 text-2xl pb-2">Basic Information</h2>
+                    <label for="bien" class="">Libellé du Bien</label>
+                    <input type="text" class="p-3 mt-2 w-full border-gray-200">
+                    <div class="flex space-x-10 mt-4">
+                        <div class="w-1/2 space-y-2">
+                            <label for="statut" class="w-full">Statut</label>
+                            <select name="statut" id="statut" class="w-full p-3 border-gray-200">
+                                <option value=""> À vendre</option>
+                                <option value=""> À Louer</option>
+                            </select>
+                        </div>
+                        <div class="w-1/2 space-y-2">
+                            <label for="statut" class="w-full">Catégorie de Bien</label>
+                            <select name="statut" id="statut" class="w-full p-3  border-gray-200">
+                                <option value=""> Maison</option>
+                                <option value=""> Appartement</option>
+                                <option value=""> Chambre</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="flex mt-4 space-x-10">
+                        <div class="w-1/2 space-y-2">
+                            <label for="statut" class="w-full">Prix</label>
+                            <input type="text" placeholder="XOF" class="w-full p-3 border-gray-200 ">
+                        </div>
+                        <div class="w-1/2 space-y-2">
+                            <label for="statut" class="w-full">Surface</label>
+                            <input type="text" class="w-full p-3 border-gray-200">
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-10 mt-4">
+                        <div class="w-1/2 space-y-2">
+                            <label for="statut" class="w-full">Chambres à coucher</label>
+                            <input type="text" list="chambres" class="w-full p-3 border-gray-200">
+                            <datalist name="statut" id="chambres">
+                                <option value="1">
+                                <option value="2">
+                                <option value="3">
+                                <option value="4">
+                                <option value="5">
+                            </datalist>
+                        </div>
+                        <div class="w-1/2 space-y-2">
+                            <label for="statut" class="w-full">Salle de Bain</label>
+                            <input type="text" list="salle_de_bain" class="w-full p-3 border-gray-200">
+                            <datalist name="statut" id="salle_de_bain">
+                                <option value="1">
+                                <option value="2">
+                                <option value="3">
+                                <option value="4">
+                                <option value="5">
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+                <div class="galerie mt-10">
+                    <h2 class="font-bold text-gray-900 text-2xl pb-2">Galerie</h2>
+                    <h6 class="text-sm"> Télécharger la galerie</h6>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
