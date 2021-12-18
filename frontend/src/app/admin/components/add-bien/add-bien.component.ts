@@ -8,10 +8,20 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class AddBienComponent implements OnInit {
 
   @ViewChild(AddBienComponent) bien;
+  isShown: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  changevalue(ev) {
+    // console.log(ev);
+    if (ev != "C") {
+      this.isShown=true;
+    }else{
+      this.isShown= false;
+    }
+
+  }
 }

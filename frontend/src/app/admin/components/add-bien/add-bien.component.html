@@ -16,10 +16,10 @@
                         </div>
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Catégorie de Bien</label>
-                            <select name="statut" id="statut" class="w-full p-3  border-gray-200">
-                                <option value=""> Maison</option>
-                                <option value=""> Appartement</option>
-                                <option value=""> Chambre</option>
+                            <select name="statut" id="statut" (change)="changevalue($event.target.value)" class="w-full p-3 border-gray-200">
+                                <option value="M" selected> Maison</option>
+                                <option value="A"> Appartement</option>
+                                <option value="C"> Chambre</option>
 
                             </select>
                         </div>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
 
-                    <div class="flex space-x-10 mt-4">
+                    <div *ngIf="isShown" class="flex space-x-10 mt-4">
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Chambres à coucher</label>
                             <input type="number" list="chambres" class="w-full p-3 border-gray-200">
@@ -74,6 +74,7 @@
                     <h6 class="text-sm"> Télécharger la galerie</h6>
                     <app-upload-image></app-upload-image>
                 </div>
+
 
                 <div class="emplacement mt-10">
                     <h2 class="font-bold text-gray-900 text-2xl pb-2">Emplacement</h2>
