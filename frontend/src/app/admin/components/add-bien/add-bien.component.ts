@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-add-bien',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-bien.component.css']
 })
 export class AddBienComponent implements OnInit {
+
+  @ViewChild(AddBienComponent) bien;
 
   constructor() { }
 

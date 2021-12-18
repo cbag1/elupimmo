@@ -1,0 +1,30 @@
+<div class="py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div (drop)="handleDrop($event)" (dragover)="handleDragOver($event)" (dragenter)="handleDragEnter()"
+            (dragleave)="handleDragLeave()"
+            class="flex flex-col border-2 border-dashed py-12 px-6 items-center border-gray-400 rounded-md">
+            <svg class="fill-current w-12 h-12 mb-3 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" viewBox="0 0 24 24">
+                <path
+                    d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479-1.092l4 4h-3v4h-2v-4h-3l4-4z" />
+            </svg>
+            <p class="text-xl">Drop files to Upload</p>
+            <p class="mb-2">or</p>
+            <label
+                class="bg-white px-4 h-9 inline-flex items-center rounded border border-gray-300 shadow-sm text-sm font-medium text-gray-700 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-50">
+                Select files
+                <input type="file" hidden name="file" id="file" multiple class="sr_only">
+            </label>
+            <p class="text-xs text-gray-600 mt-3">Max size file 512Mo</p>
+        </div>
+    </div>
+</div>
+
+<div class="preview">
+    <h3 class="font-bold text-2xl text-black"> Preview Images</h3>
+    <div class="flex h-56 space-x-10">
+        <div *ngFor="let url of urls" class="h-full" >
+            <img [src]="url" alt="" class="h-full w-full">
+        </div>
+    </div>
+</div>

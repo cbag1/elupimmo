@@ -1,4 +1,4 @@
-<div class="h-screen bg-white drop-shadow-2xl">
+<div class=" bg-white drop-shadow-2xl">
     <div class="p-12">
         <div class="forumaire text-gray-600">
             <form action="">
@@ -25,7 +25,6 @@
                         </div>
                     </div>
 
-
                     <div class="flex mt-4 space-x-10">
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Prix</label>
@@ -40,7 +39,7 @@
                     <div class="flex space-x-10 mt-4">
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Chambres à coucher</label>
-                            <input type="text" list="chambres" class="w-full p-3 border-gray-200">
+                            <input type="number" list="chambres" class="w-full p-3 border-gray-200">
                             <datalist name="statut" id="chambres">
                                 <option value="1">
                                 <option value="2">
@@ -51,7 +50,7 @@
                         </div>
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Salle de Bain</label>
-                            <input type="text" list="salle_de_bain" class="w-full p-3 border-gray-200">
+                            <input type="number" list="salle_de_bain" class="w-full p-3 border-gray-200">
                             <datalist name="statut" id="salle_de_bain">
                                 <option value="1">
                                 <option value="2">
@@ -61,11 +60,36 @@
                             </datalist>
                         </div>
                     </div>
+
+                    <!-- Description -->
+                    <div class=" mt-4">
+                        <label for="statut" class="w-full"> Description</label>
+                        <textarea name="" class="w-full h-40 border-gray-200 " id="" cols="30" rows="10"></textarea>
+                    </div>
                 </div>
+
+
                 <div class="galerie mt-10">
                     <h2 class="font-bold text-gray-900 text-2xl pb-2">Galerie</h2>
                     <h6 class="text-sm"> Télécharger la galerie</h6>
+                    <app-upload-image></app-upload-image>
                 </div>
+
+                <div class="emplacement mt-10">
+                    <h2 class="font-bold text-gray-900 text-2xl pb-2">Emplacement</h2>
+                    <div class="flex mt-4 space-x-10">
+                        <div class="w-1/2 space-y-2">
+                            <label for="adresse" class="w-full">Adresse</label>
+                            <input type="text" class="w-full p-3 border-gray-200 ">
+                        </div>
+                        <div class="w-1/2 space-y-2">
+                            <label for="ville" class="w-full">Ville</label>
+                            <input type="text" class="w-full p-3 border-gray-200">
+                        </div>
+                    </div>
+
+                </div>
+
 
             </form>
         </div>

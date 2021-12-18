@@ -12,13 +12,15 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptorInterceptor } from './interceptor/jwt-interceptor.interceptor';
 import { HomeComponent } from './home/home.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { UploadDirective } from './directives/upload.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    UploadDirective
   ],
   imports: [
     BrowserModule,

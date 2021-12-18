@@ -5,13 +5,15 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AddBienComponent } from './components/add-bien/add-bien.component';
+import { UploadImageComponent } from './components/upload-image/upload-image.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     AdminComponent,
-    AddBienComponent
+    AddBienComponent,
+    UploadImageComponent
   ],
   imports: [
     CommonModule,
