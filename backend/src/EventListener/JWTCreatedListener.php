@@ -1,5 +1,5 @@
 <?php
-
+// src/App/EventListener/JWTCreatedListener.php
 namespace App\EventListener;
 
 use Lexik\Bundle\JWTAuthenticationBundle\Event\JWTCreatedEvent;
@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class JWTCreatedListener
 {
+
     /**
      * @var RequestStack
      */
@@ -29,13 +30,14 @@ class JWTCreatedListener
     {
         $request = $this->requestStack->getCurrentRequest();
 
-        $payload = $event->getData();
-        $user=$event->getUser();
-        $payload['ip'] = $request->getClientIp();
+        $payload       = $event->getData();
+        $user= $event->getUser();
+        // $payload['ip'] = $request->getClientIp();
+        $payload['id']= $user->getId();
 
         $event->setData($payload);
 
-        $header = $event->getHeader();
+        $header        = $event->getHeader();
         $header['cty'] = 'JWT';
 
         $event->setHeader($header);

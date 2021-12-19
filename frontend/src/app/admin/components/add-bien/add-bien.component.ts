@@ -18,10 +18,11 @@ export class AddBienComponent implements OnInit {
   changevalue(ev) {
     // console.log(ev);
     if (ev != "C") {
-      this.isShown=true;
-    }else{
-      this.isShown= false;
+      this.isShown = true;
+    } else {
+      this.isShown = false;
     }
-
   }
+
+  
 }

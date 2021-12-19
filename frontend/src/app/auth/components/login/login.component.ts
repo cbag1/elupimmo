@@ -34,6 +34,10 @@ export class LoginComponent implements OnInit {
         if (result) {
           console.log("C'est bon");
           console.log(result['token']);
+          var token_decode = jwt_decode(result['token']);
+          console.log(token_decode);
+          localStorage.setItem('id', token_decode['id']);
+          console.log((localStorage.getItem('id')));
         }
         else {
           console.log("Pas bon");
