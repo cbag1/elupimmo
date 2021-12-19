@@ -24,7 +24,6 @@ export class UploadImageComponent implements OnInit {
     this.totalFilesCount = event.dataTransfer.files.length;
     // this.files = this.getImages(event.dataTransfer.files);
     // this.files.push.apply(this.getImages(event.dataTransfer.files));
-    this.filesLoaded.emit(this.files);
     // console.log("test drop");
     // console.log(this.getImages(event.dataTransfer.files));
     // console.log(this.files);
@@ -42,6 +41,7 @@ export class UploadImageComponent implements OnInit {
     });
 
     console.log(this.files);
+    this.filesLoaded.emit(this.files);
 
 
   }

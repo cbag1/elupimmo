@@ -1,3 +1,5 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +19,10 @@ import { UploadImageComponent } from './components/upload-image/upload-image.com
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     DashboardComponent

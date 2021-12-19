@@ -14,16 +14,19 @@ export class BienServiceService {
     return this.http.get(`http://localhost:8000/api/biens`);
   }
 
-  getMaisons(){
+  getMaisons() {
     return this.http.get(`http://localhost:8000/api/maisons`);
   }
 
-  getChambres(){
+  getChambres() {
     return this.http.get(`http://localhost:8000/api/chambres`);
   }
 
-  getAppartements(){
+  getAppartements() {
     return this.http.get(`http://localhost:8000/api/appartements`);
+  }
+  setChambre(data) {
+    return this.http.post('http://localhost:8000/api/chambres', data);
   }
 
 }

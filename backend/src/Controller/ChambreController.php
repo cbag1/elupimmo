@@ -31,8 +31,9 @@ class ChambreController extends AbstractController
         // dd($user);
         $manager->persist($user);
         $manager->flush();
-
-        return $this->json("success", Response::HTTP_CREATED);
+        $manager->refresh($user);
+        // dd($user->getId());
+        return $this->json(array("id" => $user->getId()), Response::HTTP_CREATED);
     }
 
     // #[Route('/chambre', name: 'chambre')]

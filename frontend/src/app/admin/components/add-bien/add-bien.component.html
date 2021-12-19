@@ -1,22 +1,23 @@
 <div class=" bg-white drop-shadow-2xl">
     <div class="p-12">
         <div class="forumaire text-gray-600">
-            <form action="">
+            <form action="" [formGroup]="bienForm" (ngSubmit)="AddBienProcess()">
                 <div class="basic ">
                     <h2 class="font-bold text-gray-900 text-2xl pb-2">Basic Information</h2>
                     <label for="bien" class="">Libellé du Bien</label>
-                    <input type="text" class="p-3 mt-2 w-full border-gray-200">
+                    <input type="text" formControlName="libelle" class="p-3 mt-2 w-full border-gray-200">
                     <div class="flex space-x-10 mt-4">
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Statut</label>
-                            <select name="statut" id="statut" class="w-full p-3 border-gray-200">
-                                <option value=""> À vendre</option>
-                                <option value=""> À Louer</option>
+                            <select name="statut"  id="statut" class="w-full p-3 border-gray-200">
+                                <option value="V" selected> À vendre</option>
+                                <option value="L"> À Louer</option>
                             </select>
                         </div>
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Catégorie de Bien</label>
-                            <select name="statut" id="statut" (change)="changevalue($event.target.value)" class="w-full p-3 border-gray-200">
+                            <select name="statut"  id="statut" (change)="changevalue($event.target.value)"
+                                class="w-full p-3 border-gray-200">
                                 <option value="M" selected> Maison</option>
                                 <option value="A"> Appartement</option>
                                 <option value="C"> Chambre</option>
@@ -28,18 +29,18 @@
                     <div class="flex mt-4 space-x-10">
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Prix</label>
-                            <input type="text" placeholder="XOF" class="w-full p-3 border-gray-200 ">
+                            <input type="text" formControlName="prix" placeholder="XOF" class="w-full p-3 border-gray-200 ">
                         </div>
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Surface</label>
-                            <input type="text" class="w-full p-3 border-gray-200">
+                            <input type="text" formControlName="surface" class="w-full p-3 border-gray-200">
                         </div>
                     </div>
 
                     <div *ngIf="isShown" class="flex space-x-10 mt-4">
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Chambres à coucher</label>
-                            <input type="number" list="chambres" class="w-full p-3 border-gray-200">
+                            <input type="number" formControlName="nbChambres" list="chambres" class="w-full p-3 border-gray-200">
                             <datalist name="statut" id="chambres">
                                 <option value="1">
                                 <option value="2">
@@ -50,7 +51,7 @@
                         </div>
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Salle de Bain</label>
-                            <input type="number" list="salle_de_bain" class="w-full p-3 border-gray-200">
+                            <input type="number" formControlName="nbCuisines" list="salle_de_bain" class="w-full p-3 border-gray-200">
                             <datalist name="statut" id="salle_de_bain">
                                 <option value="1">
                                 <option value="2">
@@ -64,7 +65,7 @@
                     <!-- Description -->
                     <div class=" mt-4">
                         <label for="statut" class="w-full"> Description</label>
-                        <textarea name="" class="w-full h-40 border-gray-200 " id="" cols="30" rows="10"></textarea>
+                        <textarea name="" formControlName="description" class="w-full h-40 border-gray-200 " id="" cols="30" rows="10"></textarea>
                     </div>
                 </div>
 
@@ -72,7 +73,7 @@
                 <div class="galerie mt-10">
                     <h2 class="font-bold text-gray-900 text-2xl pb-2">Galerie</h2>
                     <h6 class="text-sm"> Télécharger la galerie</h6>
-                    <app-upload-image></app-upload-image>
+                    <app-upload-image (filesLoaded)="setImages($event)"></app-upload-image>
                 </div>
 
 
@@ -91,7 +92,7 @@
 
                 </div>
 
-
+                <button type="submit">Ajouter Bien </button>
             </form>
         </div>
     </div>
