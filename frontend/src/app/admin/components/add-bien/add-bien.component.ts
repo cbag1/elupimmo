@@ -42,11 +42,31 @@ export class AddBienComponent implements OnInit {
   AddBienProcess() {
     console.log(this.bienForm.value);
     // console.log("Images")
-    this.bienservice.setChambre(this.bienForm.value).subscribe(
-      res => console.log(res)
-    )
+
     // console.log(this.filesUpload);
+
+    this.bienservice.setChambre(this.bienForm.value).subscribe(
+      res => {
+          this.filesUpload.forEach(
+            (value)=>{
+              let formData = new FormData();
+              let bien ='/api/chambres/'+res['id'];
+              formData.append('value',value);
+              formData.append('bien',bien);
+              this.bienservice.setImage(formData).subscribe(
+                response => console.log(response)
+              );
+            }
+          )
+  
+      }
+    );
+
+
   }
+
+
+  // }
   // Fonction qui gere le changement du select
   changevalue(ev) {
     // console.log(ev);
