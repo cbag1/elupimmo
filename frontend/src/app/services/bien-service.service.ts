@@ -41,9 +41,16 @@ export class BienServiceService {
     return this.http.post('http://localhost:8000/api/images', data);
 
   }
+
   getImageById(id: string) {
     return this.http.get(`http://localhost:8000${id}`, { responseType: 'blob' });
   }
+
+  getBienById(type:string, id:string) {
+    var url=type.toLowerCase()+'s/'+id;
+    return this.http.get(`http://localhost:8000/api/${url}`);
+  }
+
 
 }
 

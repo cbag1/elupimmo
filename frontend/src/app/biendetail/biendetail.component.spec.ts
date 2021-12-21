@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageDetailComponent } from './page-detail.component';
+import { BiendetailComponent } from './biendetail.component';
 
-describe('PageDetailComponent', () => {
-  let component: PageDetailComponent;
-  let fixture: ComponentFixture<PageDetailComponent>;
+describe('BiendetailComponent', () => {
+  let component: BiendetailComponent;
+  let fixture: ComponentFixture<BiendetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageDetailComponent ]
+      declarations: [ BiendetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageDetailComponent);
+    fixture = TestBed.createComponent(BiendetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
