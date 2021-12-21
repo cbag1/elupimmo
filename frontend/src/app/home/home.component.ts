@@ -12,7 +12,10 @@ export class HomeComponent implements OnInit {
   biens = [];
   chambres = [];
   appartements = [];
-  urls: any[] = [];
+  urlsMaisons: any[] = [];
+  urlsAppartements: any[] = [];
+  urlsChambres: any[] = [];
+
 
 
   constructor(private servicebien: BienServiceService) { }
@@ -42,23 +45,24 @@ export class HomeComponent implements OnInit {
   initListMaisons() {
     this.servicebien.getMaisons().subscribe(
       res => {
-        console.log(res['hydra:member']);
+        // console.log(res['hydra:member']);
         this.maisons = res['hydra:member'];
         this.maisons.forEach(
           (value) => {
-            // console.log(value.images[0]);
+            console.log(value.images[0]);
             this.servicebien.getImageById(value.images[0]).subscribe(
               res => {
+                console.log(res);
                 var reader = new FileReader();
                 reader.readAsDataURL(res);
                 reader.onload = (event) => {
-                  this.urls.push(event.target.result);
+                  this.urlsMaisons.push(event.target.result);
                 }
               }
             )
           }
         );
-        console.log(this.urls);
+        // console.log(this.urlsMaisons);
       }
     )
   }
@@ -66,8 +70,26 @@ export class HomeComponent implements OnInit {
   initListChambres() {
     this.servicebien.getChambres().subscribe(
       res => {
-        console.log(res['hydra:member']);
+        // console.log(res['hydra:member']);
+        
         this.chambres = res['hydra:member'];
+        this.chambres.forEach(
+          (value) => {
+            console.log(value.images[0]);
+            this.servicebien.getImageById(value.images[0]).subscribe(
+              res => {
+                console.log(res);
+                var reader = new FileReader();
+                reader.readAsDataURL(res);
+                reader.onload = (event) => {
+                  this.urlsChambres.push(event.target.result);
+                }
+              }
+            )
+          }
+        );
+        // console.log("Test CHa");
+        // console.log(this.urlsChambres);
       }
     )
   }
@@ -75,8 +97,24 @@ export class HomeComponent implements OnInit {
   initListAppartements() {
     this.servicebien.getAppartements().subscribe(
       res => {
-        console.log(res['hydra:member']);
+        // console.log(res['hydra:member']);
         this.appartements = res['hydra:member'];
+        this.appartements.forEach(
+          (value) => {
+            console.log(value.images[0]);
+            this.servicebien.getImageById(value.images[0]).subscribe(
+              res => {
+                var reader = new FileReader();
+                reader.readAsDataURL(res);
+                reader.onload = (event) => {
+                  this.urlsAppartements.push(event.target.result);
+                }
+              }
+            )
+          }
+        );
+        // console.log("Test CHa");
+        console.log(this.urlsChambres);
       }
     )
   }
