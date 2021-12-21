@@ -13,6 +13,7 @@ import { JwtInterceptorInterceptor } from './interceptor/jwt-interceptor.interce
 import { HomeComponent } from './home/home.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { UploadDirective } from './directives/upload.directive';
+import { PageDetailComponent } from './page-detail/page-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UploadDirective } from './directives/upload.directive';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    UploadDirective
+    UploadDirective,
+    PageDetailComponent
   ],
   imports: [
     BrowserModule,
