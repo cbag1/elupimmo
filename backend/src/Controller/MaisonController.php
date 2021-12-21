@@ -31,8 +31,8 @@ class MaisonController extends AbstractController
         // dd($bien);
         $manager->persist($bien);
         $manager->flush();
-
-        return $this->json("success", Response::HTTP_CREATED);
+        $manager->refresh($bien);
+        return $this->json(array("id" => $bien->getId()), Response::HTTP_CREATED);
     }
     // #[Route('/maison', name: 'maison')]
     // public function index(): Response

@@ -17,11 +17,13 @@ class Images
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+    #[Groups(["biens:read"])]
     private $id;
 
     /**
      * @ORM\Column(type="blob", nullable=true)
      */
+    
     private $value;
 
     /**

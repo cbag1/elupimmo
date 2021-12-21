@@ -30,8 +30,9 @@ class AppartementController extends AbstractController
         // dd($bien);
         $manager->persist($bien);
         $manager->flush();
+        $manager->refresh($bien);
 
-        return $this->json("success", Response::HTTP_CREATED);
+        return $this->json(array("id" => $bien->getId()), Response::HTTP_CREATED);
     }
     // #[Route('/appartement', name: 'appartement')]
     // public function index(): Response

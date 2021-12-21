@@ -18,9 +18,9 @@
                             <label for="statut" class="w-full">Catégorie de Bien</label>
                             <select name="statut"  id="statut" (change)="changevalue($event.target.value)"
                                 class="w-full p-3 border-gray-200">
-                                <option value="M" selected> Maison</option>
-                                <option value="A"> Appartement</option>
-                                <option value="C"> Chambre</option>
+                                <option value="Maison" selected> Maison</option>
+                                <option value="Appartement"> Appartement</option>
+                                <option value="Chambre"> Chambre</option>
 
                             </select>
                         </div>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div *ngIf="isShown" class="flex space-x-10 mt-4">
+                    <div *ngIf="isShown" class="flex w-full space-x-10 mt-4">
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Chambres à coucher</label>
                             <input type="number" formControlName="nbChambres" list="chambres" class="w-full p-3 border-gray-200">
@@ -52,6 +52,17 @@
                         <div class="w-1/2 space-y-2">
                             <label for="statut" class="w-full">Salle de Bain</label>
                             <input type="number" formControlName="nbCuisines" list="salle_de_bain" class="w-full p-3 border-gray-200">
+                            <datalist name="statut" id="salle_de_bain">
+                                <option value="1">
+                                <option value="2">
+                                <option value="3">
+                                <option value="4">
+                                <option value="5">
+                            </datalist>
+                        </div>
+                        <div *ngIf="isMaison" class="w-1/2 space-y-2">
+                            <label for="statut" class="w-full">Etages</label>
+                            <input type="number" formControlName="nbEtages" list="salle_de_bain" class="w-full p-3 border-gray-200">
                             <datalist name="statut" id="salle_de_bain">
                                 <option value="1">
                                 <option value="2">

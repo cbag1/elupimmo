@@ -28,9 +28,21 @@ export class BienServiceService {
   setChambre(data) {
     return this.http.post('http://localhost:8000/api/chambres', data);
   }
-  setImage(data : FormData){
+
+  setAppartement(data) {
+    return this.http.post('http://localhost:8000/api/appartements', data);
+  }
+
+  setMaison(data) {
+    return this.http.post('http://localhost:8000/api/maisons', data);
+  }
+
+  setImage(data: FormData) {
     return this.http.post('http://localhost:8000/api/images', data);
 
+  }
+  getImageById(id: string) {
+    return this.http.get(`http://localhost:8000${id}`, { responseType: 'blob' });
   }
 
 }

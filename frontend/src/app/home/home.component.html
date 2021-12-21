@@ -74,14 +74,14 @@
 
             </div>
             <carousel [cellsToShow]="4" [height]="400">
-                <div *ngFor="let maison of maisons" class="carousel-cell border">
-                    <div class="h-1/2 w-full bg-cover" style="background-image: url('../../assets/images/maison.jpg')">
-                    </div>
+                <div *ngFor="let maison of maisons; let index = index" class="carousel-cell border">
+                    <div class="h-1/2 w-full bg-cover" [ngStyle]="{'background-image': 'url(' + urls[index] + ')'}" >
+                    </div>"
                     <div class="description pt-5 px-4">
                         <h3 class=""> {{ maison.libelle }} </h3>
                         <p class="font-bold pt-2 text-xl text-blue-600"> {{ maison.prix }} XOF </p>
                         <div>
-                            {{ maison.nbChambres}} chambres | {{ maison.surface }} m2</div>
+                            {{ maison.nbChambres}} chambres | {{ maison.surface }} m2  </div>
                     </div>
                 </div>
 

@@ -2,10 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\Images;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 
@@ -28,12 +30,24 @@ class ImagesController extends AbstractController
         return $this->json("success", Response::HTTP_CREATED);
     }
 
+    #[Route(path: '/api/images/{id}', name: 'getimage', methods: ['GET'])]
+    public function getImages($id)
+    {
+        // dd($id);
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository(Images::class);
+        $image = $repository->find($id);
+        $file = $image->getValue();
+        // dd($file);
 
-    // #[Route('/images', name: 'images')]
-    // public function index(): Response
-    // {
-    //     return $this->render('images/index.html.twig', [
-    //         'controller_name' => 'ImagesController',
-    //     ]);
-    // }
+        $response = new \Symfony\Component\HttpFoundation\Response(
+            stream_get_contents($file),
+            200,
+            array(
+                'Content-Type' => 'application/octet-stream',
+            )
+        );
+
+        return $response;
+    }
 }

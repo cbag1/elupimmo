@@ -82,6 +82,7 @@ class Bien
     /**
      * @ORM\OneToMany(targetEntity=Images::class, mappedBy="bien")
      */
+    #[Groups(["biens:read", "biens:write"])]
     private $images;
 
     public function __construct()

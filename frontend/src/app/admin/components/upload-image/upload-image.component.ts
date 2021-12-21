@@ -32,7 +32,6 @@ export class UploadImageComponent implements OnInit {
     Object.entries(Object.values(event.dataTransfer.files)).forEach(([key, value]) => {
       // console.log(key, value);
       this.files.push(value);
-
       var reader = new FileReader();
       reader.readAsDataURL(value);
       reader.onload = (event) => {

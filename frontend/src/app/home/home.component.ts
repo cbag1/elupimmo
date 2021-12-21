@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   biens = [];
   chambres = [];
   appartements = [];
+  urls: any[] = [];
+
 
   constructor(private servicebien: BienServiceService) { }
 
@@ -20,15 +22,18 @@ export class HomeComponent implements OnInit {
     this.initListMaisons();
     this.initListChambres();
     this.initListAppartements();
+    // console.log(this.maisons);
 
 
   }
+
 
   initListBiens() {
     this.servicebien.getBiens().subscribe(
       res => {
         console.log(res['hydra:member']);
         this.biens = res['hydra:member'];
+
       }
 
     );
@@ -39,6 +44,21 @@ export class HomeComponent implements OnInit {
       res => {
         console.log(res['hydra:member']);
         this.maisons = res['hydra:member'];
+        this.maisons.forEach(
+          (value) => {
+            // console.log(value.images[0]);
+            this.servicebien.getImageById(value.images[0]).subscribe(
+              res => {
+                var reader = new FileReader();
+                reader.readAsDataURL(res);
+                reader.onload = (event) => {
+                  this.urls.push(event.target.result);
+                }
+              }
+            )
+          }
+        );
+        console.log(this.urls);
       }
     )
   }
