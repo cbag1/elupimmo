@@ -1,0 +1,10 @@
+<div *ngIf="isprofil" >
+    <div *ngFor="let message of messages; let i = index">
+        {{ message.contenu }}
+    </div>
+    
+</div>
+
+<div *ngIf="!isprofil">
+    shdfgdg
+</div>

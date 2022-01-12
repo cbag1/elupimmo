@@ -8,20 +8,26 @@
                     Nous vous aidons à trouver votre maison de rêve</p>
             </div>
             <div class="formulaire mb-40  bg-white px-8 rounded-md">
-                <div class="flex space-x-2 divide-x-4 py-4">
-                    <div class="space-x-5 flex flex-shrink justify-center items-center">
-                        <div class="check space-x-2">
+                <div class="flex py-4">
+                    <div class="w-1/6">
+                        <!-- <div class="check space-x-2">
                             <input type="radio" name="acheter" id="">
                             <label for="acheter">Acheter</label>
                         </div>
                         <div class="check pr-5 space-x-2 ">
                             <input type="radio" name="acheter" id="">
                             <label for="louer">Louer</label>
-                        </div>
+                        </div> -->
+                        <select name="statut" id="statut" class="w-full p-3 border-gray-200">
+                            <option value="V" selected> Maison</option>
+                            <option value="L"> Appartements</option>
+                            <option value="L"> Chambres</option>
+                        </select>
                     </div>
-                    <div class=" flex flex-grow pl-14">
+                    <div class=" flex flex-grow pl-2 w-5/6">
                         <input class="flex-grow border border-blue-100" type="text">
-                        <button class="flex-shrink px-6 text-white" style="background-color: #5d5de9;"> valider</button>
+                        <button class="flex-shrink px-10 uppercase font-bold text-white"
+                            style="background-color: #5d5de9;"> valider</button>
                     </div>
                 </div>
             </div>
@@ -31,28 +37,93 @@
     <!-- Biens -->
     <div class="biens">
         <div class="recent">
-            <div class="pt-11">
+            <section class="text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                    <div class="text-center mb-20">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Une agence
+                            immobiliere à votre portée</h1>
+                        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+                            Nous sommes une agence qualifié avec des agents professionnels qui sont à votre disposition
+                            pour trouver les meilleurs locals.
+                        </p>
+                        <div class="flex mt-6 justify-center">
+                            <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                            <div
+                                class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
 
-                <div class="desc flex justify-between">
-                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 uppercase">Récémment
-                        ajoutées</h1>
-                    <a href="#" class="uppercase text-2xl flex font-medium text-purple-800">
-                        VOIR PLUS
-                        <span class="pl-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </span>
-                    </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                                </svg>
+                            </div>
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Trouver en 1 clic</h2>
+                                <p class="leading-relaxed text-base">
+                                    Nous vous offrons une visiblité de nos Biens(Maisons, Appartements et Chambres).
+                                    Faites un choix par rapport à vos besoins.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                            <div
+                                class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M8 10.5h4m-4 3h4m9-1.5a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Economisez</h2>
+                                <p class="leading-relaxed text-base">
+                                    Pas besoin de se payer les services d'un courtier pour avoir un logement.
+                                    Notre plateforme est là pour vous aider à realiser vos rêves.
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                            <div
+                                class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Nos agents</h2>
+                                <p class="leading-relaxed text-base">
+                                    Vous allez trouvez avec nous des agents qualifié, prêts à vous denicher
+                                    le meilleur logement. 100% satisfait, on vous l'assure.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class=" w-24 p-0.5 mt-0 mb-12 bg-purple-400"></div>
-
-            </div>
+            </section>
         </div>
 
+        <div class="biens">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Nos Biens</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+                    Maisons, Appartements, Chambres
+                </p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+            </div>
+        </div>
         <div class="maison pb-10">
             <div class="pt-11">
 
@@ -73,16 +144,56 @@
                 <div class=" w-24 p-0.5 mt-0 mb-12 bg-purple-400"></div>
 
             </div>
-            <carousel [cellsToShow]="4" [height]="400">
+            <carousel [cellsToShow]="4" [height]="350">
                 <div *ngFor="let maison of maisons; let index = index" class="carousel-cell border">
-                    <div class="h-1/2 w-full bg-cover" [ngStyle]="{'background-image': 'url(' + urlsMaisons[index] + ')'}" >
+                    <div class="h-1/2 w-full bg-cover"
+                        [ngStyle]="{'background-image': 'url(' + urlsMaisons[index] + ')'}">
                     </div>"
-                    <div class="description pt-5 px-4">
-                        <h3 class=""> {{ maison.libelle }} </h3>
-                        <p class="font-bold pt-2 text-xl text-blue-600"> {{ maison.prix }} XOF </p>
-                        <div>
-                            {{ maison.nbChambres}} chambres | {{ maison.surface }} m2  </div>
+                    <div class="description pt-5 px-4 mb-4">
+                        <div class="flex justify-between">
+                            <div class="flex-2">
+                                <h3 class=""> {{ maison.libelle }} </h3>
+                                <p class=" font-bold pt-2 text-3xl tracking-wider text-blue-600">
+                                    {{ maison.prix }}
+                                    <span class="font-normal text-xl">XOF</span>
+                                </p>
+                            </div>
+                            <div class="right-0">
+                                <a [routerLink]="['/bien/maison/'+maison['id']]"
+                                    class="m-5 bg-blue-600 text-white rounded py-2 px-4">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex  border-t-2 border-b-2 divide-x-2 divide p-2 w-full">
+
+                            <div class="flex-1 flex space-x-2 justify-center">
+                                <div>{{ maison.nbChambres}}</div>
+                                <div class="h-6 w-6">
+                                    <img src="../../assets/images/bed.png" class="h-1 w-1" alt="">
+                                </div>
+                            </div>
+                            <div class="flex-1 flex space-x-2 justify-center">
+                                <div>
+                                    {{ maison.nbEtages }}
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <div class="flex-1 flex space-x-2 justify-center">
+                                <div>
+                                    {{ maison.surface }} m2
+                                </div>
+                                <div class="h-6 w-6">
+                                    <img src="../../assets/images/surface.svg" class="h-1 w-1" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </carousel>
         </div>
@@ -109,13 +220,46 @@
 
 
             </div>
-            <carousel [cellsToShow]="4" [height]="400">
+            <carousel [cellsToShow]="4" [height]="350">
                 <div *ngFor="let appartement of  appartements; let index = index " class="carousel-cell border">
-                    <div class="h-1/2 w-full bg-cover" [ngStyle]="{'background-image': 'url(' + urlsAppartements[index] + ')'}" >
+                    <div class="h-1/2 w-full bg-cover"
+                        [ngStyle]="{'background-image': 'url(' + urlsAppartements[index] + ')'}">
                     </div>
-                    <div class="description pt-5 px-4">
-                        <h3 class=""> {{ appartement.libelle }} </h3>
-                        <p class="font-bold pt-2 text-xl text-blue-600"> {{ appartement.prix }} XOF </p>
+                    <div class="description pt-10 px-4 mb-4">
+                        <div class="flex pb-2 justify-between">
+                            <div class="flex-2">
+                                <h3 class=""> {{ appartement.libelle }} </h3>
+                                <p class=" font-bold pt-2 text-3xl tracking-wider text-blue-600">
+                                    {{ appartement.prix }}
+                                    <span class="font-normal text-xl">XOF</span>
+                                </p>
+                            </div>
+                            <div class="right-0">
+                                <a [routerLink]="['/bien/maison/']"
+                                    class="m-5 bg-blue-600 text-white rounded py-2 px-4">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex  border-t-2 border-b-2 divide-x-2 divide p-2 w-full">
+
+                            <div class="flex-1 flex space-x-2 justify-center">
+                                <div>{{ appartement.nbChambres}}</div>
+                                <div class="h-6 w-6">
+                                    <img src="../../assets/images/bed.png" class="h-1 w-1" alt="">
+                                </div>
+                            </div>
+
+                            <div class="flex-1 flex space-x-2 justify-center">
+                                <div>
+                                    {{ appartement.surface }} m2
+                                </div>
+                                <div class="h-6 w-6">
+                                    <img src="../../assets/images/surface.svg" class="h-1 w-1" alt="">
+                                </div>
+                            </div>
+                        </div>
                         <!-- <div> -->
                         <!-- {{ maison.nbChambres}} chambres | {{ maison.surface }} m2</div> -->
                     </div>
@@ -144,15 +288,38 @@
                 <div class=" w-24 p-0.5 mt-0 mb-12 bg-purple-400"></div>
 
             </div>
-            <carousel [cellsToShow]="4" [height]="400">
+            <carousel [cellsToShow]="4" [height]="350">
                 <div *ngFor="let chambre of  chambres; let index = index " class="carousel-cell border">
-                    <div class="h-1/2 w-full bg-cover" [ngStyle]="{'background-image': 'url(' + urlsChambres[index] + ')'}">
+                    <div class="h-1/2 w-full bg-cover"
+                        [ngStyle]="{'background-image': 'url(' + urlsChambres[index] + ')'}">
                     </div>
                     <div class="description pt-5 px-4">
-                        <h3 class=""> {{ chambre.libelle }} </h3>
-                        <p class="font-bold pt-2 text-xl text-blue-600"> {{ chambre.prix }} XOF </p>
-                        <!-- <div> -->
-                        <!-- {{ maison.nbChambres}} chambres | {{ maison.surface }} m2</div> -->
+                        <div class="flex pb-2 justify-between">
+                            <div class="flex-3">
+                                <h3 class=""> {{ chambre.libelle }} </h3>
+                                <p class=" font-bold pt-2 text-3xl tracking-wider text-blue-600">
+                                    {{ chambre.prix }}
+                                    <span class="font-normal text-xl">XOF</span>
+                                </p>
+                            </div>
+                            <div class="flex-1">
+                                <a [routerLink]="['/bien/maison/']"
+                                    class="m-5 bg-blue-600 text-white rounded py-2 px-4">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex  border-t-2 border-b-2 divide-x-2 divide p-2 w-full">
+
+                            <div class="flex-1 flex space-x-2justify-center">
+                                <div>
+                                    {{ chambre.surface }} m2
+                                </div>
+                                <div class="h-6 w-6">
+                                    <img src="../../assets/images/surface.svg" class="h-1 w-1" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -167,6 +334,9 @@
                 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contactez-nous</h1>
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base"> Pour plus d'informations, envoyez-nous un
                     message. Nous nous faisons un plaisir de vous repondre.</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
             </div>
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
                 <div class="flex flex-wrap -m-2">

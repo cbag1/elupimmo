@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AddBienComponent } from './components/add-bien/add-bien.component';
 import { UploadImageComponent } from './components/upload-image/upload-image.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UploadImageComponent } from './components/upload-image/upload-image.com
     DashboardComponent,
     AdminComponent,
     AddBienComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    ReservationsComponent
   ],
   imports: [
     CommonModule,

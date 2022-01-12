@@ -9,6 +9,9 @@ const routes: Routes = [
   },
   {
     path : 'bien/:type/:bienId', component:BiendetailComponent
+  },
+  {
+    path: '', redirectTo  :'/home', pathMatch:'full'
   }
  
 ];

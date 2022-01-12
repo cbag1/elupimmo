@@ -23,5 +23,21 @@ export class AuthServiceService {
       );
   }
 
+  signupClient(data) {
+    return this.http.post(`http://localhost:8000/api/clients`, data);
+  }
+
+  getClients() {
+    return this.http.get(`http://localhost:8000/api/clients`);
+  }
+
+  getAgents() {
+    return this.http.get(`http://localhost:8000/api/proprietaires`);
+  }
+
+  getUsers() {
+    return this.http.get(`http://localhost:8000/api/admin/users`);
+  }
+
 
 }

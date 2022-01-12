@@ -47,7 +47,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    #[Groups(["users:read"])]
+    #[Groups(["users:read", "message:read"])]
     private $id;
 
     /**
@@ -88,14 +88,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @Assert\NotBlank(message="Le prenom ne doit pa etre blank")
      * 
      */
-    #[Groups(["users:read", "users:write"])]
+    #[Groups(["users:read", "users:write", "reservations:read", "message:read"])]
+
+
     private $prenom;
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Le nom ne doit pa etre blank")
      * 
      */
-    #[Groups(["users:read", "users:write"])]
+    #[Groups(["users:read", "users:write", "reservations:read", "message:read"])]
     private $nom;
 
     /**

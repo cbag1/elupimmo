@@ -51,6 +51,29 @@ export class BienServiceService {
     return this.http.get(`http://localhost:8000/api/${url}`);
   }
 
+  setReservation(data){
+    return this.http.post('http://localhost:8000/api/reservations', data);
+
+  }
+  putReservation(id,data){
+    return this.http.put(`http://localhost:8000/api/reservations/${id}`, data);
+
+  }
+
+  getReservationById(id: string){
+    return this.http.get(`http://localhost:8000${id}`);
+
+  }
+
+  getMessageById(id: string){
+    return this.http.get(`http://localhost:8000${id}`);
+
+  }
+
+  getReservations() {
+    return this.http.get(`http://localhost:8000/api/reservations`);
+  }
+
 
 }
 

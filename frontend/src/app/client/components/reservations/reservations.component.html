@@ -1,0 +1,77 @@
+<div class="w-full mt-10 border">
+    <div class="rounded  break-words bg-white w-full shadow-lg">
+
+        <div class="block w-full overflow-x-auto">
+            <table class="table-fixed w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th
+                            class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                            Nom du Bien
+                        </th>
+
+                        <th
+                            class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                            Date
+                        </th>
+                        <th
+                            class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+
+                            Statut
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    <tr *ngFor="let reservation of reservations; let index=index">
+                        <th
+                            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                            <div class="flex items-center">
+                                <!-- <div class="avatar">
+                                    <img src="../../../../assets/images/avatar.jpeg" class="rounded-full w-10 mr-4"
+                                        alt="">
+                                </div> -->
+                                <div>
+                                    <h4 class="font-medium"> {{ reservation.bien.libelle}} </h4>
+                                </div>
+                            </div>
+                        </th>
+
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            {{ reservation.date | date }}
+                        </td>
+                        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                            <button (click)="ReservationById(index)" *ngIf="reservation.etat==0"
+                                class="bg-blue-600 px-6 py-2 text-white rounded-full">
+                                En cours
+                            </button>
+                            <button (click)="ReservationById(index)" *ngIf="reservation.etat==1"
+                                class="bg-green-600 px-6 py-2 text-white rounded-full">
+                                Valider
+                            </button>
+                            <button (click)="ReservationById(index)" *ngIf="reservation.etat==2"
+                                class="bg-red-600 px-6 py-2 text-white rounded-full">
+                                Annuler
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="isPopup"
+    class=" absolute border w-96 border-yellow-300  px-2 py-10 text-center bg-white shadow-sm top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <h2 class="text-2xl"> Reservation : </h2><br>
+    <h3 class=" font-bold">Nom du Bien : </h3>
+    <h4> {{ reservationId.bien.libelle }} </h4>
+    <h3 class=" font-bold"> Date : </h3>
+    <h4>{{ reservationId.date }} </h4>
+    <div (click)="putReservation(reservationId.id,2)" class="flex justify-center space-x-4 pt-5">
+        <button class="bg-red-700 text-white p-4 "> Annuler </button>
+
+    </div>
+</div>

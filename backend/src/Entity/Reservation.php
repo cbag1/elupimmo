@@ -4,12 +4,19 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\ReservationRepository;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=ReservationRepository::class)
  */
-#[ApiResource]
+
+#[ApiResource(
+    normalizationContext: ['groups' => ['reservations:read']],
+    denormalizationContext: ['groups' => ['reservations:write']],
+)]
+
 class Reservation
 {
     /**
@@ -17,26 +24,40 @@ class Reservation
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
+    #[Groups(["reservations:read"])]
+
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="smallint", options={"default":0})
      */
-    private $etat;
+    #[Groups(["reservations:read", "reservations:write"])]
+
+    private $etat = 0;
 
     /**
      * @ORM\Column(type="datetime")
+     * @var DateTime
      */
+    #[Groups(["reservations:read"])]
     private $date;
+
+
+    public function __construct()
+    {
+        $this->date = new DateTime();
+    }
 
     /**
      * @ORM\ManyToOne(targetEntity=Bien::class, inversedBy="reservations")
      */
+    #[Groups(["reservations:read", "reservations:write"])]
     private $bien;
 
     /**
      * @ORM\ManyToOne(targetEntity=Client::class, inversedBy="reservations")
      */
+    #[Groups(["reservations:read", "reservations:write"])]
     private $client;
 
     public function getId(): ?int

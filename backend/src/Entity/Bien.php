@@ -40,7 +40,7 @@ class Bien
      * @Assert\NotBlank(message="Le Libellé ne doit pa etre blank")
      * 
      */
-    #[Groups(["biens:read", "biens:write"])]
+    #[Groups(["biens:read", "biens:write", "reservations:read", "reservations:write"])]
     private $libelle;
 
     /**
@@ -76,7 +76,8 @@ class Bien
     /**
      * @ORM\ManyToOne(targetEntity=Proprietaire::class, inversedBy="biens")
      */
-    #[Groups(["biens:read", "biens:write"])]
+    #[Groups(["biens:read", "biens:write", "reservations:read", "reservations:write"])]
+
     private $proprietaire;
 
     /**

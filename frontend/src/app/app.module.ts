@@ -1,3 +1,4 @@
+import { ClientModule } from './client/client.module';
 import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { NgModule } from '@angular/core';
@@ -29,6 +30,7 @@ import { BiendetailComponent } from './biendetail/biendetail.component';
     AppRoutingModule,
     AuthModule,
     AdminModule,
+    ClientModule,
     IvyCarouselModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptorInterceptor, multi: true}],
